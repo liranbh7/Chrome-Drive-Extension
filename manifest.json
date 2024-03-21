@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Google Drive Extension",
+  "description": "Open Google Drive",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+	"activeTab"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "GoogleDriveExtension.html",
+    "default_icon": "GoogleDriveIcon.png"
+  }
+}

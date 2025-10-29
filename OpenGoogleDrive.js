@@ -13,7 +13,10 @@ function focusOrOpenTab(targetUrl)
                 return;
             }
         }
-		
+
+		// If you get here, No Google Drive tab found.
+
+		// look for the current/active tab
 		let activeTab = tabs[0];
 		for (let i = 0; i < tabs.length; i++) 
 		{
@@ -23,8 +26,9 @@ function focusOrOpenTab(targetUrl)
 				break;
 			}
 		}
-		
-		if (activeTab && activeTab.url.includes('chrome://newtab')) // open targetUrl in current tab.
+
+		// If current tab is empty, open targetUrl in current tab.
+		if (activeTab && activeTab.url.includes('chrome://newtab')) 
 		{ 
 			chrome.tabs.update(activeTab.id, { url: targetUrl });
 		}
@@ -36,4 +40,5 @@ function focusOrOpenTab(targetUrl)
 }
 
 focusOrOpenTab("https://drive.google.com");
+
 

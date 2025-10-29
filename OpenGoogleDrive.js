@@ -35,5 +35,5 @@ function focusOrOpenTab(targetUrl)
     });
 }
 
-// Example usage
 focusOrOpenTab("https://drive.google.com");
+
